@@ -50,3 +50,15 @@ result = graph.invoke({"input": "https://example.com/image.png"})
 1. 确保已正确配置阿里云OSS上传凭证
 2. 图片格式支持PNG/JPG等常见格式
 3. 结果JSON文件会保存在`output`目录
+4. `config.py`文件 - 需要填写阿里云OSS的相关配置信息：
+   - accessKeyId
+   - accessKeySecret
+   - endpoint
+   - bucket
+   - baseUrl
+5. `main.py`文件(第36行) - 需要填写阿里云DashScope的API密钥：
+   ```python
+   os.environ["DASHSCOPE_API_KEY"] = "你的API_KEY"
+   ```
+
+这些密钥可以从阿里云控制台获取，请确保妥善保管不要泄露。

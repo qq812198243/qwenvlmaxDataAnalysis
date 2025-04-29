@@ -27,13 +27,19 @@ export DASHSCOPE_API_KEY="你的API_KEY"
 
 ## 使用方法
 
-1. 将待分析的图片放入`dataset`文件夹
+1. 将待分析的图片放入`dataset` `png后缀`文件夹
 2. 运行主程序
 ```bash
 python main.py
+
 ```
 3. 程序会自动处理图片并生成结果
 4. 结果保存在`output`文件夹中
+5. 运行gui界面
+
+```bash
+python gui.py
+```
 
 ## 示例代码
 

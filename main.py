@@ -199,29 +199,8 @@ if __name__ == "__main__":
             if oss_url:
                 urls.append(oss_url)
                 print(f"已上传文件: {file_path} -> {oss_url}")
-    
-    # 添加测试URL
-    # urls.append('https://agent-dataset.oss-cn-shenzhen.aliyuncs.com/test/data1.png')
-    # 运行测试样本
-    # for i, sample in enumerate(samples):
-    #     print(f"\n 样本 {i+1}：\n原始文本：\n{sample.strip()}\n")
-    #     result = app.invoke({"input": sample})
-    #     print("📦 结构化输出：")
-    #     print(json.dumps(result["extracted"], indent=2, ensure_ascii=False))
-    # for i , url in enumerate(urls):
-    #     print(f"\n 样本 {i+1}：\n原始文本：\n{url}\n")
-    #     result = graph.invoke({"input": url})
-    #     # print("📦 结构化输出：")
-    #     json_data = result['standardized']
-    #     result_json = extract_json_blocks(json_data)
-
-    #     print("📦 结构化输出END：",result_json[0])
-        # json_data = result["output"]
-        # json_str = json_data.replace("```json", "").replace("```", "").strip()
-        # print(json.dumps(json_data, indent=2, ensure_ascii=False))
-
-    # ... 原有代码 ...
-
+            else:
+                print(f"上传文件 {file_path} 失败")
     for i , url in enumerate(urls):
         print(f"\n 样本 {i+1}：\n原始文本：\n{url}\n")
         result = graph.invoke({"input": url})

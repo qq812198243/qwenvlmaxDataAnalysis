@@ -56,7 +56,7 @@ def extract_json_blocks(text):
             continue
     return json_objects
 
-
+# 定义工具函数 未来可能做意图识别，目前只做图片识别
 @tool
 def recognize_image_from_url(image_url: str):
     """识别图片内容，输入是图片URL，输出是识别结果。"""
